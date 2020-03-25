@@ -1,6 +1,13 @@
 function isCar(car1, car2, car3) {
-    // return 
+    const items = [car1, car2, car3];
+    const allEqual = items => items.every(item => item === items[0])
+    
+    if (allEqual(items)) {
+        return true;
+    }
+    return false
 }
+
 
 console.log(isCar(true, true, true));
 console.log(isCar(false, false, false));
