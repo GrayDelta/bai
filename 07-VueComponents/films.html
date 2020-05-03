@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <matrix></matrix>
+        <stargate></stargate>
+        <startrek></startrek>
+    </div>
+
+  <script>
+    Vue.component('matrix', {
+        data() {
+        return {
+            title: 'Matrix',
+            director: ' Lana & Lilly Wachowski',
+            productionYear: 1999
+        }
+        },
+        template : `
+        <div>
+            <h1>{{title}}</h1>
+            <h2>{{director}}</h2>
+            <p>{{productionYear}}</p>
+        </div>
+        `
+    })
+
+    Vue.component('stargate', {
+        data() {
+        return {
+            title: 'Stargate: Continuum',
+            director: 'Martin Wood',
+            productionYear: 2008
+        }
+        },
+        template : `
+        <div>
+            <h1>{{title}}</h1>
+            <h2>{{director}}</h2>
+            <p>{{productionYear}}</p>
+        </div>
+        `
+    })
+
+    Vue.component('startrek', {
+        data() {
+        return {
+            title: 'Star Trek Into Darkness',
+            director: 'J.J. Abrams',
+            productionYear: 2013
+        }
+        },
+        template : `
+        <div>
+            <h1>{{title}}</h1>
+            <h2>{{director}}</h2>
+            <p>{{productionYear}}</p>
+        </div>
+        `
+    })
+
+
+    var app = new Vue({
+        el: '#app'
+    });
+  </script>
+</body>
+</html>
